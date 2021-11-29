@@ -54,7 +54,8 @@ function findEntrance(matrix, stack) {
             return;
         }
     }
-    header[0].innerHTML = "The Maze is wrong!"
+    header[0].innerHTML = "The Maze is wrong!";
+    return;
 }
 
 function navigate(matrix, stack, x, y) {

@@ -42,18 +42,19 @@ function matrixMaker(cell, matrix) {
 }
 
 function findEntrance(matrix, stack) {
+    let header = document.getElementsByTagName("h1");
     for (let y = 0; y < 6; y++) {
         if (matrix[0][y] == "1") {
             stack.push([0] + ", " + [y]);
             let result = navigate(matrix, stack, 0, y);
             
             if (result == false || result == undefined) {
-                let header = document.getElementsByTagName("h1")
                 header[0].innerHTML = "The Maze is wrong!"
             }
             return;
         }
     }
+    header[0].innerHTML = "The Maze is wrong!"
 }
 
 function navigate(matrix, stack, x, y) {
